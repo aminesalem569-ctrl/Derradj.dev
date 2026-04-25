@@ -1,0 +1,39 @@
+{
+  "settings": {
+    "name": "Derradj",
+    "email": "contact@derradj.dev",
+    "password": "admin"
+  },
+  "products": [
+    {
+      "id": "1",
+      "title": "Pro SaaS Template",
+      "desc": "Complete Next.js SaaS boilerplate with auth & payments.",
+      "price": "$49",
+      "icon": "Download",
+      "type": "Source Code",
+      "paymentType": "stripe",
+      "paymentLink": "https://buy.stripe.com/test_123"
+    },
+    {
+      "id": "2",
+      "title": "Fitness App UI Kit",
+      "desc": "Premium React Native UI kit for fitness applications.",
+      "price": "$29",
+      "icon": "Smartphone",
+      "type": "Mobile App Kit",
+      "paymentType": "paypal",
+      "paymentLink": "https://paypal.me/derradj"
+    },
+    {
+      "id": "3",
+      "title": "Admin Dashboard",
+      "desc": "Beautifully crafted admin dashboard using shadcn/ui.",
+      "price": "10000 DZD",
+      "icon": "Download",
+      "type": "Template",
+      "paymentType": "external",
+      "paymentLink": "BaridiMob: 00799999999999999999"
+    }
+  ]
+}

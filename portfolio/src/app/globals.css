@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-foreground: #FAFAFA;
+  --color-primary: #D4AF37; /* Luxury Gold */
+  --color-primary-foreground: #000000;
+  --color-secondary: #06B6D4; /* Cyan accent */
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #1A1A1A;
+  --color-muted-foreground: #A1A1AA;
+  --color-card: #0A0A0A;
+  --color-card-foreground: #FAFAFA;
+  --color-border: #27272A;
+  --color-input: #18181B;
+  --color-ring: #D4AF37;
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-arabic: "Tajawal", "Cairo", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #f8f9fa;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #D4AF37;
+    --primary-foreground: #000000;
+    --secondary: #06B6D4;
+    --secondary-foreground: #ffffff;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --accent: #f4f4f5;
+    --accent-foreground: #18181b;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #D4AF37;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #050505;
+    --foreground: #fafafa;
+    --card: #0A0A0A;
+    --card-foreground: #fafafa;
+    --popover: #0A0A0A;
+    --popover-foreground: #fafafa;
+    --primary: #D4AF37;
+    --primary-foreground: #000000;
+    --secondary: #06B6D4;
+    --secondary-foreground: #ffffff;
+    --muted: #1a1a1a;
+    --muted-foreground: #a1a1aa;
+    --accent: #1a1a1a;
+    --accent-foreground: #fafafa;
+    --border: #27272a;
+    --input: #18181b;
+    --ring: #D4AF37;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  [dir="rtl"] body {
+    @apply font-arabic;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Subtle glow effects */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+}
