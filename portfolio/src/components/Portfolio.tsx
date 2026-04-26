@@ -71,7 +71,7 @@ export function Portfolio({ projects }: { projects?: any[] }) {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag: string) => (
                       <span
                         key={tag}
                         className="px-3 py-1 text-xs rounded-full bg-accent text-accent-foreground border border-border"
