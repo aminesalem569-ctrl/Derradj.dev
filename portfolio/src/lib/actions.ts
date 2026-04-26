@@ -58,7 +58,8 @@ export async function submitContact(formData: FormData) {
     }
 
     // Send Telegram notification
-    await sendTelegramNotification(validatedData.name, validatedData.email, validatedData.message);
+    const telegramMsg = `🔔 *رسالة جديدة من الموقع!*\n\n👤 *الاسم:* ${validatedData.name}\n📧 *الإيميل:* ${validatedData.email}\n📝 *الرسالة:*\n${validatedData.message}`;
+    await sendTelegramNotification(telegramMsg);
 
     // Also send email if Resend key is configured
     if (process.env.RESEND_API_KEY) {
